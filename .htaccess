@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} www.cryptoegg.games
+RewriteRule (.*) https://cryptoegg.games/$1 [R=301,L]
+RewriteRule ^cryptoegg(/.*)?$ https://cryptoegg.games/$1 [R=301,L]
