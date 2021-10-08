@@ -255,23 +255,30 @@
 
 
     .button-container
+        margin: 0 auto
+        position: relative
         display: flex
         justify-content: center
+        align-items: center
         margin-bottom: 10px
-        padding: 15px 20px
-        background-size: cover
-        background-repeat: no-repeat
-        background-position: center
+        padding: 15px
         cursor: pointer
+        max-width: 320px
+
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 1
 
         &.red
-            background-image: url('../images/button-red.png')
             button
                 text-shadow: 0 2px #66332f, 0 -2px #66332f, -2px 0 #66332f, 2px 0 #66332f
                 
 
         &.green
-            background-image: url('../images/button-green.png')
             button
                 text-shadow: 0 2px #5c7152, 0 -2px #5c7152, -2px 0 #5c7152, 2px 0 #5c7152
 
@@ -286,6 +293,7 @@
             border: none
             text-align: center
             cursor: pointer
+            z-index: 1
     
         
 
