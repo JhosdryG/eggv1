@@ -1,0 +1,41 @@
+/*RESPONSIVE SIZES*/
+@mixin phone-m()
+    @media screen and ( min-width: $phone-m )
+        @content
+@mixin tablet()
+    @media screen and ( min-width: $tablet )
+        @content
+        
+@mixin desktop()
+    @media screen and ( min-width: $desktop )
+        @content
+
+@mixin desktop-lg()
+    @media screen and ( min-width: $desktop-lg )
+        @content
+
+    
+
+@mixin bg-image($url)
+    background: url($url)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+
+    // /*CREATE A GRID CARD LAYOUT
+    //   PARAMETERS
+    //   NUMBER OF COLUMNS ON TABLTES
+    //   NUMBER OF COLUMNS ON DESKTOP
+    //   GRID-GAP SIZE*/
+@mixin card-layout($tablet,$desktop,$grid-gap)
+    display: grid
+    grid-template-columns: 1fr
+    grid-gap: $grid-gap
+
+    @include tablet()
+        grid-template-columns: repeat($tablet,1fr)
+    
+    @include desktop()
+        grid-template-columns: repeat($desktop,1fr)
+
+    

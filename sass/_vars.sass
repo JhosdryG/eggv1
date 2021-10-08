@@ -1,0 +1,112 @@
+//------------------------------- COLOR PALETTES----------------------------------
+$red: ()
+$orange: ()
+$blue: ()
+$green: ()
+$yellow: ()
+$pink: ()
+$aqua: ()
+$purple: ()
+$lemon: ()
+$brown: ()
+$diamond: ()
+$water: ()
+$blood: ()
+$gray: ()
+
+@for $i from 1 through 15
+    //---------------------------------------------------------ORANGE COLORS
+    $orange: map-merge($orange,($i: darken(#ff805e,$i*2.5)))
+    //----------------------------------------------------------RED COLORS
+    $red: map-merge($red,($i: darken(#ff6d6d,$i*3))) 
+    //----------------------------------------------------------BLUE COLORS
+    $blue: map-merge($blue,($i: darken(#8181f7,$i*3.5)))    
+    //----------------------------------------------------------GREEN COLORS
+    $green: map-merge($green,($i: darken(#7cff8e,$i*4)))    
+    //----------------------------------------------------------YELLOW COLORS
+    $yellow: map-merge($yellow,($i: darken(#ffe681,$i*4.5)))    
+    //----------------------------------------------------------PINK COLORS
+    $pink: map-merge($pink,($i: darken(#ff79f1,$i*4)))    
+    //----------------------------------------------------------AQUA COLORS
+    $aqua: map-merge($aqua,($i: darken(#92fff9,$i*4.5)))    
+    //----------------------------------------------------------PURPLE COLORS
+    $purple: map-merge($purple,($i: darken(#d57cfe,$i*4.5)))    
+    //----------------------------------------------------------LEMON COLORS
+    $lemon: map-merge($lemon,($i: darken(#fff600,$i*2)))    
+    //----------------------------------------------------------BROWN COLORS
+    $brown: map-merge($brown,($i: darken(#994a4a,$i*2.5)))    
+    //----------------------------------------------------------DIAMOND COLORS
+    $diamond: map-merge($diamond,($i: darken(#4ed0a4,$i*2.6)))    
+    //----------------------------------------------------------WATER COLORS
+    $water: map-merge($water,($i: darken(#68a4ef,$i*3)))    
+    //----------------------------------------------------------BLOOD COLORS
+    $blood: map-merge($blood,($i: darken(#db1a1a,$i*2.5)))    
+    //----------------------------------------------------------BLOOD COLORS
+    $gray: map-merge($gray,($i: darken(#c6c6c6,$i*3.5)))    
+
+@function red($tone)
+    @return map-get($red,$tone) 
+
+@function orange($tone)
+    @return map-get($orange,$tone) 
+
+@function blue($tone)
+    @return map-get($blue,$tone) 
+
+@function green($tone)
+    @return map-get($green,$tone) 
+
+@function yellow($tone)
+    @return map-get($yellow,$tone) 
+
+@function pink($tone)
+    @return map-get($pink,$tone) 
+
+@function aqua($tone)
+    @return map-get($aqua,$tone) 
+
+@function purple($tone)
+    @return map-get($purple,$tone)
+
+@function lemon($tone)
+    @return map-get($lemon,$tone) 
+
+@function brown($tone)
+    @return map-get($brown,$tone) 
+
+@function diamond($tone)
+    @return map-get($diamond,$tone) 
+
+@function water($tone)
+    @return map-get($water,$tone) 
+
+@function blood($tone)
+    @return map-get($blood,$tone) 
+
+@function gray($tone)
+    @return map-get($gray,$tone) 
+
+//--------------------------------------------------------------------------------
+
+
+/*SPACERS*/
+$spacer-xl: 50px
+$spacer-l: 30px
+$spacer-m: 25px
+$spacer-s: 20px
+$spacer-xs: 15px
+$spacer: 10px
+
+
+/*SCREEN RESOLUTIONS*/
+$phone-m: 374px
+$tablet: 720px
+$desktop: 1024px
+$desktop-lg: 1400px
+
+    
+/* Colors */
+$primary: #38c884
+$primary-l: #3fd890
+$secondary: #dda41f
+$secondary-d: #ef4942

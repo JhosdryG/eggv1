@@ -1,0 +1,416 @@
+@import ./_vars
+@import ./_mixins
+@import ./_globals
+
+
+.custom-container
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 20px
+    margin: 0 auto
+    max-width: 800px
+
+.tab-content
+    padding: 10px
+
+.bg-left
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: none
+    @media (min-width: 700px)
+        display: block
+        z-index: -1
+
+
+@media (min-width: 700px)
+    .content
+        display: flex
+        padding-top: 100px
+
+        .content-box:nth-child(2)
+            position: relative
+            padding: 10px
+            padding-bottom: 0
+            margin-left: 20px
+            display: flex
+            flex-direction: column-reverse
+            width: 30%
+            border-radius: 10px
+            align-self: flex-end
+
+
+
+
+.content-box
+    margin: 15px 0
+
+
+.purple-box
+    position: relative
+    padding: 20px
+    @media (min-width: 700px)
+        padding: 50px 20px
+
+    .purple-box-bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -10
+
+.spend-container
+
+    .spend-input-continer
+        @media (min-width: 700px)
+            display: flex
+            justify-content: space-between
+    label 
+        
+        text-align: center
+        text-transform: uppercase
+
+        .step
+            font-size: 1.2rem
+            font-weight: bold
+            font-family: '8bit'
+            margin-bottom: 5px
+
+        .desc 
+            font-size: .6rem
+            margin-bottom: 10px
+
+    .spend-input
+        display: flex
+        justify-content: center
+        margin: 0 auto
+        margin-bottom: 10px
+        padding: 0 15px
+        max-width: 250px
+
+        input
+            width: 100%
+            text-align: right
+            font-size: 1.2rem
+            font-weight: bold
+            font-family: "party"
+            padding: 5px
+            outline: 2px solid #7e7395
+            border: 1px solid #fff
+            border-left: 3px solid #c0c0c0
+            border-top: 3px solid #c0c0c0
+        
+    .button-container
+        margin: 0 auto
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 10px
+        padding: 15px
+        cursor: pointer
+        max-width: 320px
+
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 1
+
+        button 
+            width: 100%
+            text-transform: uppercase
+            font-family: '8bit'
+            font-size: .9rem
+            font-weight: bold
+            text-shadow: 0 2px #6b650b, 0 -2px #6b650b, -2px 0 #6b650b, 2px 0 #6b650b
+            background-color: transparent
+            color: #e7e3e4
+            border: none
+            text-align: center
+            z-index: 2
+            cursor: pointer
+            span
+                font-family: '8bit'
+
+    @media (min-width: 700px)
+        .spend-box-right
+            margin-right: 20px
+
+    .chickens-counter
+        font-size: 0.8rem
+        text-align: center
+        text-transform: uppercase
+        span 
+            font-weight: bold
+
+
+.separator
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px
+    font-size: 0.8rem
+    text-align: center
+
+    img
+        width: 30px
+        height: 30px
+
+.purple-box
+    @media (min-width: 700px)
+        padding: 50px 20px
+
+    .bees-tally-container
+        margin: 20px 0
+        @media (min-width: 700px)
+            display: flex
+            padding: 0 20px
+            align-items: center
+            justify-content: space-around
+            .tally-text 
+                width: 30%
+                margin-right: 20px
+            .number-container
+                width: 100%
+                max-width: 230px
+
+
+    .tally-text 
+        text-align: center
+        font-size: 1.1rem
+        font-weight: bold
+        font-family: "8bit"
+        margin-bottom: 10px
+
+        & + p 
+            text-align: center
+            text-transform: uppercase
+            font-size: 0.7rem
+            @media (min-width: 700px)
+                text-align: left
+
+    .number-container
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 10px
+        margin-bottom: 10px
+        max-width: 300px
+        @media (min-width: 700px)
+            margin-left: 10px
+
+        img 
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 1
+
+        span
+            font-size: 1.5rem
+            font-family: "party"
+            color: #eff12c
+            z-index: 2
+
+    .number-data
+        h2
+            font-family: "8bit"
+            font-size: 1rem
+            margin-bottom: 10px
+            text-align: center
+
+
+
+.other-button-container
+    display: flex
+    justify-content: center
+    .buttons-chickens
+        display: none
+    @media (min-width: 700px)
+        padding: 0 10px
+        flex-direction: column
+        .buttons-chickens
+            display: block
+            margin: 10px 0
+
+
+    .button-container
+        display: flex
+        justify-content: center
+        margin-bottom: 10px
+        padding: 15px 20px
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        cursor: pointer
+
+        &.red
+            background-image: url('../images/button-red.png')
+            button
+                text-shadow: 0 2px #66332f, 0 -2px #66332f, -2px 0 #66332f, 2px 0 #66332f
+                
+
+        &.green
+            background-image: url('../images/button-green.png')
+            button
+                text-shadow: 0 2px #5c7152, 0 -2px #5c7152, -2px 0 #5c7152, 2px 0 #5c7152
+
+        button 
+            width: 100%
+            text-transform: uppercase
+            font-family: '8bit'
+            font-size: .9rem
+            font-weight: bold
+            background-color: transparent
+            color: #e7e3e4
+            border: none
+            text-align: center
+            cursor: pointer
+    
+        
+
+.contract
+    position: relative
+    margin: 20px 0
+    p
+        text-align: center 
+        font-weight: bold
+        text-transform: uppercase
+        font-size: 0.8rem
+        margin-bottom: 5px
+        font-family: "8bit"
+
+    span 
+        font-weight: normal
+        color: #cec647
+
+    &::after
+        margin-top: 5px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        content: ''
+        background-image: url('../images/franja.png')
+        background-size: contain
+        background-repeat: no-repeat
+        width: 80%
+        height: 10px
+        @media (min-width: 700px)
+            background-image: url('../images/franja-desktop.png')
+
+
+.referals
+    margin: 40px 0
+    text-align: center
+    p 
+        font-size: 0.8rem
+        margin: 10px 0
+        text-transform: uppercase
+        font-weight: bold
+        span 
+            color: #cec647
+            text-decoration: none
+
+    span
+        color: #cec647
+        text-decoration: underline
+
+    .button-container
+        margin: 0 auto
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 10px
+        padding: 15px
+        cursor: pointer
+        max-width: 320px
+
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 1
+
+        button 
+            width: 100%
+            text-transform: uppercase
+            font-family: '8bit'
+            font-size: .9rem
+            font-weight: bold
+            text-shadow: 0 2px #6b650b, 0 -2px #6b650b, -2px 0 #6b650b, 2px 0 #6b650b
+            background-color: transparent
+            color: #e7e3e4
+            border: none
+            text-align: center
+            z-index: 2
+            cursor: pointer
+            span
+                font-family: '8bit'
+                color: #e7e3e4
+                text-decoration: none
+
+.social
+    h2
+        font-size: 1rem
+        text-align: center
+        font-family: "8bit"
+        margin-bottom: 30px
+
+    &-icons
+        display: flex
+        justify-content: center
+
+        a 
+            margin: 0 20px
+            max-width: 40px
+
+
+
+footer
+    position: relative
+    padding: 50px 50px
+    border-radius: 10px
+
+    .bg-left
+        display: block
+        z-index: -1
+
+    @media (min-width: 700px)
+        .instruction
+            text-align: left!important
+        
+
+    .instruction
+        margin: 20px 0
+        text-align: left
+        .title
+            font-weight: bold
+            text-transform: uppercase
+            margin-bottom: 10px
+            color: #cec647
+        .details 
+            p 
+                margin: 15px 0
+                line-height: 25px
+
+            ul 
+                text-align: left
+                line-height: 25px
+                li
+                    margin: 5px 0
+
+.info-box
+    @media (min-width: 700px)
+        order: 1

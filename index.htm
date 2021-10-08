@@ -41,6 +41,9 @@
     <meta name="msapplication-TileColor" content="#2b5797" />
     <meta name="theme-color" content="#ffffff" />
     <title>Crypto EGG Game</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="css/index.min.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
 
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -91,7 +94,8 @@
         <div id="modal-internal"></div>
       </div>
     </div>
-    <div class="container">
+
+    <div class="custom-container">
       <div>
         <div class="tab-content" id="myTabContent">
           <div
@@ -156,8 +160,280 @@
             </a>
 
             <!-- everything here -->
+
+            <div class="content">
+              <div class="content-box">
+                <div class="banner">
+                  <img src="images/banner.png" alt="banner" />
+                </div>
+
+                <div class="spend-container purple-box">
+                  <img
+                    src="images/bg-spend-mobile.png"
+                    alt="prductionbg"
+                    class="purple-box-bg"
+                  />
+
+                  <div class="spend-input-continer">
+                    <div class="spend-box-right">
+                      <label for="approve">
+                        <p class="step">1. Enter bnb</p>
+                        <p class="desc">
+                          the amount you want to use <br />and
+                          <b>click approve</b> below
+                        </p>
+                      </label>
+                      <div class="spend-input">
+                        <input
+                          class="form-control"
+                          id="spend-allowance"
+                          name="approve"
+                          onchange=""
+                          step="1000"
+                          type="number"
+                          value="500"
+                        />
+                      </div>
+
+                      <div class="button-container">
+                        <img
+                          src="images/button-yellow-mobile.png"
+                          alt="button-bg"
+                        />
+                        <button
+                          class="btn btn-lg btn-buy"
+                          onclick="approve()"
+                          role="button"
+                        >
+                          <span>Approve</span>
+                        </button>
+                      </div>
+
+                      <p id="spend-limit"></p>
+                    </div>
+
+                    <div>
+                      <label for="spend">
+                        <p class="step">2. purchase</p>
+                        <p class="desc">
+                          enter the bnb you want to use <br />to
+                          <b>hire your miners</b>
+                        </p>
+                      </label>
+                      <div class="spend-input">
+                        <input
+                          class="form-control"
+                          id="eth-to-spend"
+                          name="spend"
+                          onchange="updateBuyPrice()"
+                          step="100"
+                          type="number"
+                          value="50"
+                        />
+                      </div>
+                      <div class="button-container">
+                        <img
+                          src="images/button-yellow-mobile.png"
+                          alt="button-bg"
+                        />
+
+                        <button
+                          class="btn btn-lg btn-buy"
+                          onclick="buyEggs2()"
+                          role="button"
+                        >
+                          <span> Hire chikens </span>
+                        </button>
+                      </div>
+                      <p class="chickens-counter">
+                        hire
+                        <span id="eggs-to-buy-2">?</span>
+                        chickens
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="separator">
+                  <img src="images/arrow-right.png" alt="arrow-right" />
+                  <p id="minibuy">0.01 BNB HIRES ? CHIKENS</p>
+                  <img src="images/arrow-left.png" alt="arrow-lef" />
+                </div>
+
+                <div class="production-produced-container purple-box">
+                  <img
+                    src="images/bg-purple-box-mobile.png"
+                    alt="prductionbg"
+                    class="purple-box-bg"
+                  />
+
+                  <div class="bees-tally-container">
+                    <div>
+                      <h2 class="tally-text">chicken miners</h2>
+                    </div>
+                    <div class="number-container">
+                      <img src="images/bg-number.png" alt="bgnumber" />
+                      <span class="num-miners">0</span>
+                    </div>
+                  </div>
+
+                  <div class="bees-tally-container">
+                    <div>
+                      <h2 class="tally-text">production</h2>
+                      <p>feet per hour</p>
+                    </div>
+                    <div class="number-container">
+                      <img src="images/bg-number.png" alt="bgnumber" />
+                      <span id="production-rate">0</span>
+                    </div>
+                  </div>
+
+                  <div class="custom-row">
+                    <div class="dm-container-right bees-tally-container">
+                      <div>
+                        <h2 class="tally-text">mined eggs</h2>
+                        <p><span id="until-full">?</span> until full</p>
+                      </div>
+
+                      <div class="number-container">
+                        <img src="images/bg-number.png" alt="bgnumber" />
+                        <span id="sell-price">?</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-box">
+                <img src="images/bg-left.png" alt="bg-left" class="bg-left" />
+                <div class="other-button-container">
+                  <img
+                    src="images/chickens.png"
+                    alt="chickens"
+                    class="buttons-chickens"
+                  />
+                  <div class="button-container green">
+                    <button
+                      class="btn btn-lg btn-hatch"
+                      onclick="hatchEggs1()"
+                      role="button"
+                    >
+                      reinvest
+                    </button>
+                  </div>
+
+                  <div class="button-container red">
+                    <button
+                      class="btn btn-lg btn-sell"
+                      onclick="sellEggs(displayTransactionMessage); document.getElementById('sellprice')"
+                      role="button"
+                    >
+                      Withdraw
+                    </button>
+                  </div>
+                </div>
+
+                <div class="info-box">
+                  <div class="altcolor contract">
+                    <p>
+                      Contract balance : <br /><span
+                        ><span id="contract-balance">0</span> bnb</span
+                      >
+                    </p>
+                    <p>
+                      Your balance : <br /><span
+                        ><span id="user-balance">0.5486</span> bnb</span
+                      >
+                    </p>
+                  </div>
+
+                  <div class="referals">
+                    <p>
+                      earn <span>10%</span> of what your referrals deposit using
+                      your link :
+                    </p>
+                    <div class="button-container">
+                      <img
+                        src="images/button-yellow-mobile.png"
+                        alt="button-bg"
+                      />
+                      <button
+                        class="btn btn-lg btn-buy"
+                        onclick="coypyreferal()"
+                        role="button"
+                      >
+                        <span id="referalText">copy link</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="social">
+                    <h2>for more information and help join to our community</h2>
+                    <div class="social-icons">
+                      <a href=""><img src="images/discord.png" alt="" /></a>
+                      <a href=""><img src="images/telegram.png" alt="" /></a>
+                      <a href=""><img src="images/bscan.png" alt="" /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- <footer class="footer">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4><u>Sustainability</u></h4>
+            <p>Unlike it's predecessors which paid 100% daily, causing instant and massive inflation. Crypto EGG Game
+              pays a modest 10% daily, allowing investors to rest easy knowing that their investments have unlimited
+              growth potential and a maximum, improbable risk of less than 10%.
+              <h4><u>Verified Public Contract</u></h4>
+              <p>The Crypto EGG Game contract is public, verified and can be viewed here on <a
+                  href="https://bscscan.com/address/0xfD259E5a4591Bd6E3f7d902bC656F93049a760BB"
+                  target="_blank"><u>BSCScan</u></a>.</p>
+          </div>
+          <div class="col-lg-6">
+            <h4><u>Miner Chicken Info</u></h4>
+            <p>Chicken Miner pays 10% daily, according to the current mining efficiency rate. The mining efficiency rate
+              rises and falls as you and other players hire miners, compound earnigs and pocket BNB. </p>
+            <p>The object of the game is hiring more miners, sooner and more often than other players. This in turn
+              earns you more BNB faster. Hiring more miners using your daily BNB earnings will 10x your miners within 30
+              days or less.</p>
+          </div>
+          <div class=""></div>
+          <div class="col-lg-12">
+            <center>
+              <p><span><a href="instructions.php.html" target="_blank"><img alt="How To Start Mining"
+                      src="assets/img/quesionmarkguy.png" width="15%" height="auto"><b>INSTRUCTIONS</b></a></span></p>
+            </center>
+          </div>
+          <div class="">
+            <div class="col-md-12">
+              <font style="font-size:14px">
+                <center>
+                  <p>Earn <b>10%</b> of what your referrals deposit using your link:</br>
+
+                  </p>
+                </center>
+              </font>
+            </div>
+            <center>
+              <ul class="nav navbar-nav navbar-right font-weight-normal">
+                <li><a class="social-pad" href="https://t.me/cryptoegg_en" target="_blank"><img alt="Telegram"
+                      class="social-icons" src="assets/img/social-icons/telegram.svg"><span
+                      class="hide-mobile">Telegram</span></a></li>
+                <li><a class="social-pad" href="https://twitter.com/CryptoEgg_Game" target="_blank"><img alt="Twitter"
+                      class="social-icons" src="assets/img/social-icons/Twitter-Logo.png"><span
+                      class="hide-mobile">Twitter</span></a></li>
+                <li><a class="social-pad" href="https://bscscan.com/address/0xfD259E5a4591Bd6E3f7d902bC656F93049a760BB"
+                    target="_blank"><img alt="BSCSCAN" class="social-icons"
+                      src="assets/img/social-icons/bscscan3.png"><span class="hide-mobile">Verified Contract</span></a>
+                </li>
+              </ul>
+            </center>
+          </div>
+        </div>
+      </footer> -->
       </div>
       <script src="assets/js/ie-emulation-modes-warning.js"></script>
       <script src="assets/js/web3.min.js"></script>
