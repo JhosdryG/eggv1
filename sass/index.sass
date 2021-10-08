@@ -64,6 +64,15 @@
         z-index: -10
 
 .spend-container
+    .pollito
+        padding-bottom: 5px
+        display: none
+        @media (min-width: 700px)
+            max-width: 180px
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            align-items: center
 
     .chicken-buy-counter
         display: flex
@@ -75,6 +84,10 @@
             margin-right: 10px
         p 
             font-weight: bold
+
+        @media (min-width: 700px)
+            &.first 
+                display: none
 
     .spend-input-continer
         @media (min-width: 700px)
@@ -190,7 +203,7 @@
                 margin-right: 20px
             .number-container
                 width: 100%
-                max-width: 230px
+                max-width: 225px
 
 
     .tally-text 
@@ -216,7 +229,6 @@
         padding: 10px
         margin: 0 auto
         margin-bottom: 10px
-        max-width: 300px
 
 
         img 

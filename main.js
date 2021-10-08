@@ -198,10 +198,12 @@ function updateSellPrice() {
 
 function updateBuyPrice() {
   var eggstobuydoc = document.getElementById("eggstobuy");
+  var eggstobuydoc2 = document.getElementById("eggstobuy2");
   var trxspenddoc = document.getElementById("ethtospend");
   calculateEggBuySimple(web3.utils.toWei(trxspenddoc.value), function (eggs) {
     devFee(eggs, function (fee) {
       eggstobuydoc.textContent = formatEggs(eggs - fee);
+      eggstobuydoc2.textContent = formatEggs(eggs - fee);
     });
   });
 }
