@@ -131,8 +131,8 @@ function refreshData() {
         allnumminers[i].textContent = translateQuantity(miners);
       }
     }
-    var productiondoc = document.getElementById("production");
-    productiondoc.textContent = formatEggs(lastNumMiners * 60 * 60);
+    // var productiondoc = document.getElementById("production");
+    // productiondoc.textContent = formatEggs(lastNumMiners * 60 * 60);
 
     var sellsforexampledoc = document.getElementById("sellsforexample");
     calculateEggBuySimple(web3.utils.toWei("0.1"), function (eggs) {
@@ -149,8 +149,8 @@ function refreshData() {
   copyText.value = refLink;
 }
 function updateEggNumber(eggs) {
-  var hatchminersquantitydoc = document.getElementById("hatchminersquantity");
-  hatchminersquantitydoc.textContent = translateQuantity(eggs, 0);
+  // var hatchminersquantitydoc = document.getElementById("hatchminersquantity");
+  // hatchminersquantitydoc.textContent = translateQuantity(eggs, 0);
   var allnumeggs = document.getElementsByClassName("numeggs");
   for (var i = 0; i < allnumeggs.length; i++) {
     if (allnumeggs[i]) {
