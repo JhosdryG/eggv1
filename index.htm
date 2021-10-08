@@ -113,14 +113,14 @@
             <!-- barril timing -->
             <p class="pphr">Unlimited BNB on barrel</p>
             <!-- buy chickens input, this first -->
-            <input
+            <!-- <input
               class="form-control"
               id="ethtospend"
               onchange="updateBuyPrice()"
               step="1"
               type="number"
               value="1"
-            />
+            /> -->
             <!-- buy chickens in input -->
             <a
               class="btn btn-lg btn-buy"
@@ -129,7 +129,7 @@
               >Buy Miners
             </a>
             <!-- how many chickes will buy input amount -->
-            <span id="eggstobuy">?</span>
+            <!-- <span id="eggstobuy">?</span> -->
             <!-- reivest bnb -->
             <a
               class="btn btn-lg btn-hatch"
@@ -179,57 +179,23 @@
                       <label for="approve">
                         <p class="step">1. Enter bnb</p>
                         <p class="desc">
-                          the amount you want to use <br />and
-                          <b>click approve</b> below
+                          min <b>0.1</b> bnb so you do not eat <br />
+                          the fees when withdrawing
                         </p>
                       </label>
                       <div class="spend-input">
                         <input
                           class="form-control"
-                          id="spend-allowance"
-                          name="approve"
-                          onchange=""
-                          step="1000"
-                          type="number"
-                          value="500"
-                        />
-                      </div>
-
-                      <div class="button-container">
-                        <img
-                          src="images/button-yellow-mobile.png"
-                          alt="button-bg"
-                        />
-                        <button
-                          class="btn btn-lg btn-buy"
-                          onclick="approve()"
-                          role="button"
-                        >
-                          <span>Approve</span>
-                        </button>
-                      </div>
-
-                      <p id="spend-limit"></p>
-                    </div>
-
-                    <div>
-                      <label for="spend">
-                        <p class="step">2. purchase</p>
-                        <p class="desc">
-                          enter the bnb you want to use <br />to
-                          <b>hire your miners</b>
-                        </p>
-                      </label>
-                      <div class="spend-input">
-                        <input
-                          class="form-control"
-                          id="eth-to-spend"
-                          name="spend"
+                          id="ethtospend"
                           onchange="updateBuyPrice()"
-                          step="100"
+                          step="1"
                           type="number"
-                          value="50"
+                          value="1"
                         />
+                      </div>
+                      <div class="chicken-buy-counter">
+                        <img src="images/miniegg.png" alt="miniegg icon" />
+                        <span id="eggstobuy">?</span>
                       </div>
                       <div class="button-container">
                         <img
@@ -242,14 +208,9 @@
                           onclick="buyEggs2()"
                           role="button"
                         >
-                          <span> Hire chikens </span>
+                          <span>buy chicken miners</span>
                         </button>
                       </div>
-                      <p class="chickens-counter">
-                        hire
-                        <span id="eggs-to-buy-2">?</span>
-                        chickens
-                      </p>
                     </div>
                   </div>
                 </div>
