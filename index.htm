@@ -145,11 +145,11 @@
               >Withdraw your BNB
             </a> -->
             <!-- contrac balance -->
-            <span id="contractBal">Contract Balance: ?</span>
+            <!-- <span id="contractBal">Contract Balance: ?</span> -->
             <!--  your balance -->
-            <span id="userTrx">Your Balance: ?</span>
+            <!-- <span id="userTrx">Your Balance: ?</span> -->
             <!-- referal link -->
-            <a id="playerreflink" onclick="copyRef()">
+            <!-- <a id="playerreflink" onclick="copyRef()">
               referal link
               <input
                 id="copytextthing"
@@ -157,7 +157,7 @@
                 type="text"
                 value="Hello Worldfdgerh"
               />
-            </a>
+            </a> -->
 
             <!-- everything here -->
 
@@ -289,12 +289,12 @@
                   <div class="altcolor contract">
                     <p>
                       Contract balance : <br /><span
-                        ><span id="contract-balance">0</span> bnb</span
+                        ><span id="contractBal">?</span> bnb</span
                       >
                     </p>
                     <p>
                       Your balance : <br /><span
-                        ><span id="user-balance">0.5486</span> bnb</span
+                        ><span id="userTrx">?</span> bnb</span
                       >
                     </p>
                   </div>
@@ -309,12 +309,20 @@
                         src="images/button-yellow-mobile.png"
                         alt="button-bg"
                       />
+
                       <button
+                        id="playerreflink"
                         class="btn btn-lg btn-buy"
-                        onclick="coypyreferal()"
+                        onclick="copyRef()"
                         role="button"
                       >
-                        <span id="referalText">copy link</span>
+                        <p id="referalText">Copy link</p>
+                        <input
+                          id="copytextthing"
+                          style="display: none"
+                          type="text"
+                          value="Hello Worldfdgerh"
+                        />
                       </button>
                     </div>
                   </div>
@@ -322,9 +330,13 @@
                   <div class="social">
                     <h2>for more information and help join to our community</h2>
                     <div class="social-icons">
-                      <a href=""><img src="images/discord.png" alt="" /></a>
-                      <a href=""><img src="images/telegram.png" alt="" /></a>
-                      <a href=""><img src="images/bscan.png" alt="" /></a>
+                      <a href="https://t.me/cryptoegg_en"
+                        ><img src="images/telegram.png" alt=""
+                      /></a>
+                      <a
+                        href="https://bscscan.com/address/0xfD259E5a4591Bd6E3f7d902bC656F93049a760BB"
+                        ><img src="images/bscan.png" alt=""
+                      /></a>
                     </div>
                   </div>
                 </div>
@@ -332,6 +344,46 @@
             </div>
           </div>
         </div>
+        <footer>
+          <div class="paragraph">
+            <p class="title">Sustainability of the project</p>
+            <div class="details">
+              Unlike it's predecessors which paid 100% daily, causing instant
+              and massive inflation. Crypto EGG Game pays a modest 10% daily,
+              allowing investors to rest easy knowing that their investments
+              have unlimited growth potential and a maximum, improbable risk of
+              less than 10%.
+            </div>
+          </div>
+          <div class="paragraph">
+            <p class="title">verified public contrac</p>
+            <div class="details">
+              The Crypto EGG Game contract is public, verified and can be viewed
+              here on
+              <a
+                href="https://bscscan.com/address/0xfD259E5a4591Bd6E3f7d902bC656F93049a760BB"
+                target="_blank"
+                ><u>BSCScan</u></a
+              >.
+            </div>
+          </div>
+          <div class="paragraph">
+            <p class="title">
+              Miner Chicken Info
+            </p>
+            <div class="details">
+              <p>
+                  Chicken Miner pays 10% daily, according to the current mining efficiency rate. The mining efficiency rate
+                rises and falls as you and other players hire miners, compound earnigs and pocket BNB. 
+              </p>
+    
+              </p>The object of the game is hiring more miners, sooner and more often than other players. This in turn
+                earns you more BNB faster. Hiring more miners using your daily BNB earnings will 10x your miners within 30
+                days or less.
+              </p>
+            </div>
+          </div>
+        </footer>
         <!-- <footer class="footer">
         <div class="row">
           <div class="col-lg-6">

@@ -90,16 +90,14 @@ function refreshData() {
   var baseNum = 0;
   contractBalance(function (result) {
     rawStr = numberWithCommas(Number(result).toFixed(3));
-    balanceElem.textContent =
-      "Contract Balance: " + stripDecimals(rawStr, 3) + " BNB";
+    balanceElem.textContent = stripDecimals(rawStr, 3);
   });
 
   web3.eth
     .getBalance(currentAddr)
     .then((result) => {
       rawStr = numberWithCommas(Number(web3.utils.fromWei(result)).toFixed(3));
-      document.getElementById("userTrx").textContent =
-        "Your Balance: " + stripDecimals(rawStr, 3) + " BNB";
+      document.getElementById("userTrx").textContent = stripDecimals(rawStr, 3);
     })
     .catch((err) => {
       console.log(err);
@@ -705,7 +703,11 @@ function copyRef() {
   copyText.select();
   document.execCommand("Copy");
   copyText.style.display = "none";
-  displayModalMessage("copied link to clipboard");
+  refText = document.getElementById("referalText");
+  refText.textContent = "link copied";
+  setTimeout(() => {
+    refText.textContent = "copy link";
+  }, 2500);
   //alert("Copied the text: " + copyText.value);
 }
 

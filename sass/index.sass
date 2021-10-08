@@ -350,7 +350,7 @@
         justify-content: center
         align-items: center
         margin-bottom: 10px
-        padding: 15px
+        padding: 5px
         cursor: pointer
         max-width: 320px
 
@@ -375,14 +375,14 @@
             text-align: center
             z-index: 2
             cursor: pointer
-            span
+            p
                 font-family: '8bit'
                 color: #e7e3e4
                 text-decoration: none
 
 .social
     h2
-        font-size: 1rem
+        font-size: .8rem
         text-align: center
         font-family: "8bit"
         margin-bottom: 30px
@@ -398,37 +398,26 @@
 
 
 footer
-    position: relative
-    padding: 50px 50px
-    border-radius: 10px
-
-    .bg-left
-        display: block
-        z-index: -1
-
-    @media (min-width: 700px)
-        .instruction
-            text-align: left!important
-        
-
-    .instruction
+    .paragraph
         margin: 20px 0
-        text-align: left
         .title
             font-weight: bold
             text-transform: uppercase
-            margin-bottom: 10px
-            color: #cec647
-        .details 
-            p 
-                margin: 15px 0
-                line-height: 25px
-
-            ul 
+            margin-bottom: 5px
+            text-align: center
+            @media (min-width: 700px)
                 text-align: left
+
+        .details
+            line-height: 25px
+            text-align: justify
+            p
+                margin-bottom: 10px
                 line-height: 25px
-                li
-                    margin: 5px 0
+                text-align: justify
+
+            a 
+                color: #fff
 
 .info-box
     @media (min-width: 700px)
