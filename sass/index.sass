@@ -237,6 +237,9 @@
         margin: 0 auto
         margin-bottom: 10px
 
+        @media (min-width: 700px)
+            justify-content: flex-end
+
 
         img 
             position: absolute
@@ -445,3 +448,19 @@ footer
 .info-box
     @media (min-width: 700px)
         order: 1
+
+.credits
+    margin-top: 200px
+    text-align: center
+
+    &-social
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 15px
+        a
+            margin: 0 10px
+            width: 20px
+
+            img 
+                width: 20px
