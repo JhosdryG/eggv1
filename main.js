@@ -126,9 +126,10 @@ function refreshData() {
     var allnumminers = document.getElementsByClassName("numminers");
     for (var i = 0; i < allnumminers.length; i++) {
       if (allnumminers[i]) {
-        allnumminers[i].textContent = new Intl.NumberFormat("en-US", {
-          maximumSignificantDigits: 2,
-        }).format(translateQuantity(miners));
+        console.log(miners);
+        allnumminers[i].textContent = new Intl.NumberFormat("en-US").format(
+          miners
+        );
       }
     }
     // var productiondoc = document.getElementById("production");
