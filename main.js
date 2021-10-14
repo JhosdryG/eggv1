@@ -126,7 +126,9 @@ function refreshData() {
     var allnumminers = document.getElementsByClassName("numminers");
     for (var i = 0; i < allnumminers.length; i++) {
       if (allnumminers[i]) {
-        allnumminers[i].textContent = translateQuantity(miners);
+        allnumminers[i].textContent = new Intl.NumberFormat("en-US", {
+          maximumSignificantDigits: 2,
+        }).format(translateQuantity(miners));
       }
     }
     // var productiondoc = document.getElementById("production");
@@ -136,7 +138,9 @@ function refreshData() {
     calculateEggBuySimple(web3.utils.toWei("0.1"), function (eggs) {
       devFee(eggs, function (fee) {
         sellsforexampledoc.textContent =
-          "0.1 BNB Hires " + formatEggs(eggs - fee) + " miners";
+          "0.1 BNB Hires " +
+          new Intl.NumberFormat("en-US").format(formatEggs(eggs - fee)) +
+          " miners";
       });
     });
   });
@@ -187,8 +191,10 @@ function updateSellPrice() {
     if (eggs > 0) {
       calculateEggSell(eggs, function (sun) {
         devFee(sun, function (fee) {
-          eggstoselldoc.textContent = formatTrxValue(
-            web3.utils.fromWei(sun) - web3.utils.fromWei(fee)
+          eggstoselldoc.textContent = new Intl.NumberFormat("en-US", {
+            maximumSignificantDigits: 4,
+          }).format(
+            formatTrxValue(web3.utils.fromWei(sun) - web3.utils.fromWei(fee))
           );
         });
       });
@@ -202,8 +208,12 @@ function updateBuyPrice() {
   var trxspenddoc = document.getElementById("ethtospend");
   calculateEggBuySimple(web3.utils.toWei(trxspenddoc.value), function (eggs) {
     devFee(eggs, function (fee) {
-      eggstobuydoc.textContent = formatEggs(eggs - fee);
-      eggstobuydoc2.textContent = formatEggs(eggs - fee);
+      eggstobuydoc.textContent = new Intl.NumberFormat("en-US").format(
+        formatEggs(eggs - fee)
+      );
+      eggstobuydoc2.textContent = new Intl.NumberFormat("en-US").format(
+        formatEggs(eggs - fee)
+      );
     });
   });
 }
