@@ -464,3 +464,50 @@ footer
 
             img 
                 width: 20px
+
+.social-modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: rgba(0,0,0,.7)
+    z-index: 100000
+    padding: 20px
+
+    &.no-show
+        display: none
+
+    .modal-box
+        position: relative
+        width: 100%
+        max-width: 600px
+        padding: 40px
+
+        .modal-bg
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: -1
+
+        .modal-close
+            position: absolute
+            top: -30px
+            right: -30px
+            width: 90px
+            height: 90px
+            z-index: 2
+            cursor: pointer
+
+        .modal-link
+            z-index: 3
+            p
+                color: #fff
+                margin: 10px 0
+                text-transform: uppercase
+                line-height: 25px
